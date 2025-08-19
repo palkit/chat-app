@@ -47,7 +47,6 @@ export const signup = async (req, res) => {
   }
 };
 
-
 export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -76,7 +75,6 @@ export const login = async (req, res) => {
   }
 };
 
-
 export const logout = (req, res) => {
   try {
     res.cookie("jwt", "", { maxAge: 0 });
@@ -86,7 +84,6 @@ export const logout = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
-
 
 export const updateProfile = async (req, res) => {
   try {
